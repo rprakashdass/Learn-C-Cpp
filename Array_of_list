@@ -1,0 +1,66 @@
+#include<stdio.h>
+
+int n = 0;
+int i = 0,j = 0;
+int a[20] = {1,2,3,4,5,6,7,8,9};
+
+void add(int ele){
+    a[n] = ele;
+    n++;
+}
+
+void add_at(int pos,int ele){
+    for(i = n;i > pos;i++)
+        a[i] = a[i-1];
+    a[pos] = ele;
+    n--;
+}
+
+void remov(int ele){
+    for(i = 0;a[i] != '\0';i++){
+        if(a[i] == ele){
+            continue;
+        }
+        a[j] = a[i];
+        j++;
+    }
+    a[j] = '\0';
+}
+
+void remov_pos(int pos){
+    for(i = 0;a[i] != '\0';i++){
+        if(i == pos){
+            continue;
+        }
+        a[j] = a[i];
+        j++;
+    }
+    a[j] = '\0';
+}
+
+int main(){
+    int choice;
+    printf("1.add\n2.add_at\n3.remove\n4.remov_pos\n");
+    printf("Enter your choice   ");
+    scanf("%d",&choice);
+    switch(choice){
+        case 1:
+            add(14);
+            break;
+        case 2:
+            add_at(4,14);
+            break;
+            
+        case 3:
+            remov(4);
+            break;
+            
+        case 4:
+            remov_pos(4);
+            break;
+    }
+    for(i = 0;a[i] != '\0';i++){
+        printf("%d  ",a[i]);
+    }
+
+}
