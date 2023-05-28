@@ -1,24 +1,35 @@
+/*C Program to add , delete Operations in an Array List*/
+
 #include<stdio.h>
 
 int n = 0;
 int i = 0,j = 0;
-int a[20] = {1,2,3,4,5,6,7,8,9};
+int a[20];
+int element,position;
 
-void add(int ele){
-    a[n] = ele;
+void add(){
+    printf("\nEnter element to at add at %dth index  : ",n);
+    scanf("%d",&element);
+    a[n] = element;
     n++;
 }
 
-void add_at(int pos,int ele){
-    for(i = n;i > pos;i++)
+void add_at(){
+    printf("\nEnter the position where the element to be added");
+    scanf("%d",&position);
+    printf("\nEnter element to be added at %dth position  : ",position);
+    scanf("%d",&element);
+    for(i = n;i > position;i++)
         a[i] = a[i-1];
-    a[pos] = ele;
+    a[position] = element;
     n--;
 }
 
-void remov(int ele){
+void remov(){
+    printf("\nEnter element to at deleted   : ");
+    scanf("%d",&element);
     for(i = 0;a[i] != '\0';i++){
-        if(a[i] == ele){
+        if(a[i] == element){
             continue;
         }
         a[j] = a[i];
@@ -27,9 +38,11 @@ void remov(int ele){
     a[j] = '\0';
 }
 
-void remov_pos(int pos){
+void remov_pos(){
+    printf("\nEnter the position to be deleted : ");
+    scanf("%d",&position);
     for(i = 0;a[i] != '\0';i++){
-        if(i == pos){
+        if(i == position){
             continue;
         }
         a[j] = a[i];
@@ -41,26 +54,32 @@ void remov_pos(int pos){
 int main(){
     int choice;
     printf("1.add\n2.add_at\n3.remove\n4.remov_pos\n");
-    printf("Enter your choice   ");
+    do{
+    printf("\nEnter your choice  : ");
     scanf("%d",&choice);
     switch(choice){
         case 1:
-            add(14);
+            add();
             break;
         case 2:
-            add_at(4,14);
+            add_at();
             break;
             
         case 3:
-            remov(4);
+            remov();
             break;
             
         case 4:
-            remov_pos(4);
+            remov_pos();
             break;
+        case 5:
+            return 0;
     }
-    for(i = 0;a[i] != '\0';i++){
+    
+    printf("\n<---------Elements in the Array :--------->\n");
+    for(i = 0;a[i] != '\0';i++)
         printf("%d  ",a[i]);
-    }
-
+    printf("\n<---------Elements in the Array :--------->\n");
+    
+    }while(choice <= 4);
 }
