@@ -1,0 +1,104 @@
+// Here are 20 pointer problems to solve:
+
+// 1. Write a program to find the length of a string using a pointer.
+// 2. Write a program to swap elements using call by reference.
+// 3. Write a program to find the factorial of a given number using pointers.
+// 4. Write a program to count the number of vowels and consonants in a string using a pointer.
+// 5. Write a program to sort an array using a pointer.
+// 6. Write a C program to demonstrate how a function returns a pointer.
+// 7. Write a program to find the maximum element in an array using pointers.
+// 8. Write a program to find the minimum element in an array using pointers.
+// 9. Write a program to find the sum of all elements in an array using pointers.
+// 10. Write a program to print the elements of an array in reverse order using pointers.
+// 11. Write a program to demonstrate the use of pointers to structures.
+// 12. Write a program to show a pointer to a union.
+// 13. Write a program to show a pointer to an array whose contents are pointers to structures.
+// 14. Write a program to print all the alphabets using a pointer.
+// 15. Write a program to print a string in reverse using a pointer.
+// 16. Write a program to find the longest common substring of two strings using pointers.
+// 17. Write a program to find the longest common subsequence of two strings using pointers.
+// 18. Write a program to find the longest palindromic substring of a string using pointers.
+// 19. Write a program to find the longest substring without repeating characters using pointers.
+// 20. Write a program to find the maximum sum of a contiguous subarray in an array using pointers.
+
+// These are just a few examples of pointer problems. There are many more problems that can be solved using pointers.
+
+
+// 1. Write a program to find the length of a string using a pointer.
+
+// #include<stdio.h>
+// int main(){
+//     int count=0;
+//     char *ptr;
+//     char str[20];
+//     printf("Enter the String   : ");
+//     scanf("%[^\n]s",str);
+//     ptr = str;
+//     for(int i = 0;ptr[i] != '\0';i++){
+//         count++;
+//     }
+//     printf("The length of the string is %d",count);
+// }
+
+
+// 2. Write a program to swap elements using call by reference.
+
+// #include<stdio.h>
+// void swap(int *n1,int *n2){
+//     int temp;
+//     temp = *n1;
+//     *n1 = *n2;
+//     *n2 = temp;
+// }
+// int main(){
+//     int num1,num2;
+//     printf("Enter the Elements a,b:    : ");
+//     scanf("%d %d",&num1,&num2);
+//     swap(&num1,&num2);
+//     printf("Elements after Swaping \na = %d    b = %d ",num1,num2);
+
+// }
+
+// // 3. Write a program to find the factorial of a given number using pointers.
+
+// #include<stdio.h>
+// void factorial(int n,int* fact){
+//     // int fact = 1;
+//     while(n > 0){
+//         *fact =*fact * n;
+//         n--;
+//     }
+// }
+// int main(){
+//     int Number;
+//     int fact = 1;
+//     printf("Enter the number   : ");
+//     scanf("%d",&Number);
+//     factorial(Number,&fact);
+//     printf("Factorial of %d is %d",Number,fact);
+// }
+
+// 4. Write a program to count the number of vowels and consonants in a string using a pointer.
+
+#include<Stdio.h>
+void count_vow_cons(char* str[]){
+    int count_vow=0;
+    int count_cons=0;
+    char vow[20] = "Aeiouaeiou";
+    for(int i = 0;*str[i] != '\0';i++){
+        if(*str[i] == vow[i]){
+            count_vow++;
+        }
+    }
+}
+int main(){
+    char str[20] = "Prakash";
+    count_vow_cons(&str);
+}
+
+
+
+
+
+
+
