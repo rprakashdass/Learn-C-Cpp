@@ -80,21 +80,108 @@
 
 // 4. Write a program to count the number of vowels and consonants in a string using a pointer.
 
-#include<Stdio.h>
-void count_vow_cons(char* str[]){
-    int count_vow=0;
-    int count_cons=0;
-    char vow[20] = "Aeiouaeiou";
-    for(int i = 0;*str[i] != '\0';i++){
-        if(*str[i] == vow[i]){
-            count_vow++;
-        }
-    }
-}
-int main(){
-    char str[20] = "Prakash";
-    count_vow_cons(&str);
-}
+// #include<stdio.h>
+// void count_vow_cons(char *str,int *count_vow,int *count_cons){
+//     char vow[20] = "AEIOUaeiou";
+//     for(int i = 0;str[i] != '\0';i++){
+//         int is_vow=0;
+//         for(int j = 0;vow[j] != '\0';j++){
+//             if(str[i] == vow[j]){
+//                 is_vow++;
+//             }
+//         }
+//             if(is_vow >= 1){
+//                 (*count_vow)++;
+//             }
+//           else if ((str[i] >= 'B' && str[i] <= 'Z') || (str[i] >= 'b' && str[i] <= 'z')) {
+//                 (*count_cons)++;
+//                 break;
+//             }
+//         }
+// }
+// int main(){
+//     int count_vow=0;
+//     int count_cons=0;
+//     printf("Enter the string   : ");
+//     char str[20];
+//     scanf("%[^\n]s",str);
+//     count_vow_cons(str,&count_vow,&count_cons);
+//     printf("The number of vowels are %d\nThe number of Consonants are %d",count_vow,count_cons);
+// }
+
+
+// 5. Write a program to sort an array using a pointer.
+
+// #include<stdio.h>
+// int main(){
+//     int ar[20] = {1,2,3,4,5};
+//     int i,j=0;
+//     for(i = 0;ar[i] != '\0';i++){
+        
+//     }
+// }
+
+// 7. Write a program to find the maximum element in an array using pointers.
+
+
+// #include<stdio.h>
+// void maximum(int *max,int arr[]){
+//     for(int i = 0;arr[i] != '\0';i++){
+//         if(arr[i] > *max){
+//             *max = arr[i];
+//         }
+//     }
+// }
+
+// int main(){
+//     int arr[200];
+//     int i;
+//     for(i = 0;arr[i] != '\0';i++){
+//         scanf("%d",&arr[i]);
+//     }
+//     int max = arr[0];
+//     maximum(&max,arr);
+//     printf("Maximum element in array is %d",max);
+// }
+
+
+// // 8. Write a program to find the minimum element in an array using pointers.
+
+
+// #include<stdio.h>
+// void minimum(int *min,int arr[]){
+//     for(int i = 0;arr[i] != '\0';i++){
+//         if(arr[i] < *min){
+//             *min = arr[i];
+//         }
+//     }
+// }
+
+// int main(){
+//     // int arr[20] = {9,2,3,4,9,1,5,0,7};
+//     int arr[20];
+//     int i;
+//     int min = arr[0];
+//     for(i = 0;arr[i] != '\0';i++){
+//         scanf("%d",&arr[i]);
+//     }
+//     int max = arr[0];
+//     minimum(&min,arr);
+//     printf("Minumum element in array is %d",min);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
