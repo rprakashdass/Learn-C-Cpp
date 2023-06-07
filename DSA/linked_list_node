@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include<stdlib.h>
+struct node{
+    int data;
+    struct node* next;
+}head;
+
+void newNode(int ele){
+    struct node* newNode;
+    newNode = (struct node*)malloc(sizeof(struct node));
+    newNode -> data = ele;
+    newNode -> next = NULL;
+}
+
+int main()
+{
+    int element;
+    printf("Enter the elements to be added   : ");
+    scanf("%d",&element);
+    return 0;
+}
