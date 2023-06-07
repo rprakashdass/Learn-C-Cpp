@@ -1,0 +1,30 @@
+//Example program 1: To allocate memory in runtime using malloc()
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    printf("Program started:\n");
+    int n;
+    int* ptrAr;
+    printf("Enter the number of elements to be included in the array   : ");
+    scanf("%d",&n);
+    ptrAr = (int*) malloc(n * 4);
+    //To check whether memory is allocated or not
+    if (ptrAr == NULL)
+        printf("memory is not allocated\n");
+    else{
+        printf("memory is succesfully allocated:\n");
+        printf("Enter the elements   : \n");
+        for(int i =0;i < n;i++){
+            scanf("%d",&ptrAr[i]);
+        }
+        printf("The elements were...\n");
+        for(int i =0;i < n;i++){
+            printf("%d  ",ptrAr[i]);
+        }
+    }
+
+    return 0;
+}
