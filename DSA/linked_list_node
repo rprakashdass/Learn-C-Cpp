@@ -1,15 +1,25 @@
+//Insert delete operations in linked list using nodes
+
 #include <stdio.h>
 #include<stdlib.h>
+
 struct node{
     int data;
     struct node* next;
-}head;
+};
 
-void newNode(int ele){
+struct node* head = NULL;
+
+void insert_at_head(int ele){
     struct node* newNode;
     newNode = (struct node*)malloc(sizeof(struct node));
     newNode -> data = ele;
     newNode -> next = NULL;
+    if (head == NULL){
+        head = newNode;
+    }
+    printf("%d ",head->data);
+
 }
 
 int main()
@@ -17,5 +27,5 @@ int main()
     int element;
     printf("Enter the elements to be added   : ");
     scanf("%d",&element);
-    return 0;
+    insert_at_head(element);
 }
