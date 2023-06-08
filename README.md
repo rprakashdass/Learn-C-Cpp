@@ -1,6 +1,6 @@
-# Linked List Operations in C
+# Programming in C
 
-This repository provides a basic implementation of linked list operations in the C programming language. It aims to help beginners understand the concepts and functions associated with linked lists.
+Welcome to the "Programming in C" repository! This repository contains a collection of C programming examples and exercises to help you learn and practice C programming concepts.
 
 ## Table of Contents
 
@@ -8,17 +8,18 @@ This repository provides a basic implementation of linked list operations in the
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Available Operations](#available-operations)
+- [Examples](#examples)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
-A linked list is a data structure that consists of a sequence of nodes, where each node contains data and a reference (link) to the next node in the sequence. Linked lists are dynamic data structures that can grow or shrink during program execution.
+This repository aims to provide beginners with a practical approach to learning the C programming language. It covers various topics and concepts, including data types, control statements, functions, arrays, pointers, and more.
+
+Each topic contains code examples and exercises that allow you to practice and reinforce your understanding of the concepts. The examples are provided in the form of individual C files, making it easy to navigate and learn.
 
 ## Prerequisites
 
-To run the code provided in this repository, you'll need:
+To run the code examples in this repository, you'll need:
 
 - A C compiler such as GCC or Clang
 - Basic knowledge of the C programming language
@@ -28,62 +29,44 @@ To run the code provided in this repository, you'll need:
 1. Clone the repository to your local machine:
 
    ```shell
-   git clone https://github.com/your-username/linked-list-operations.git
+   git clone https://github.com/prakash02100/programming_c.git
    ```
 
 2. Change to the project directory:
 
    ```shell
-   cd linked-list-operations
+   cd programming_c
    ```
 
-3. Compile the code using a C compiler:
+3. Compile the individual C files using a C compiler:
 
    ```shell
-   gcc linked_list.c -o linked_list
+   gcc filename.c -o filename
    ```
+
+   Replace `filename.c` with the name of the C file you want to compile, and `filename` with the desired output executable name.
 
 ## Usage
 
-To use the linked list operations, follow these steps:
+To run a compiled C program, execute the corresponding executable file. For example, if you have compiled a file named `example.c` into an executable named `example`, run the following command:
 
-1. Include the `linked_list.h` header file in your C program:
+```shell
+./example
+```
 
-   ```c
-   #include "linked_list.h"
-   ```
+## Examples
 
-2. Create a new linked list using the `createList()` function:
+The repository contains a variety of C programming examples, covering different topics and concepts. Some of the example files you'll find include:
 
-   ```c
-   Node* myList = createList();
-   ```
+- `hello_world.c`: A simple "Hello, World!" program.
+- `variables.c`: Examples demonstrating the usage of variables and data types.
+- `control_statements.c`: Examples of control statements such as if-else, switch-case, and loops.
+- `functions.c`: Illustrations of defining and using functions in C.
+- `arrays.c`: Examples showcasing arrays and their manipulation.
+- `pointers.c`: Demonstrations of pointer variables and their applications.
 
-3. Perform various operations on the linked list using the available functions (see next section).
-
-4. Free the memory allocated for the linked list when you're done:
-
-   ```c
-   freeList(myList);
-   ```
-
-## Available Operations
-
-The following operations are provided by the linked list implementation in this repository:
-
-- `createList()`: Creates an empty linked list and returns a pointer to the first node.
-- `isEmpty()`: Checks if the linked list is empty.
-- `getSize()`: Returns the number of elements in the linked list.
-- `insertFront()`: Inserts a new element at the front of the linked list.
-- `insertEnd()`: Inserts a new element at the end of the linked list.
-- `insertAtPosition()`: Inserts a new element at a specified position in the linked list.
-- `deleteFront()`: Deletes the first element from the linked list.
-- `deleteEnd()`: Deletes the last element from the linked list.
-- `deleteAtPosition()`: Deletes the element at a specified position in the linked list.
-- `display()`: Displays the elements of the linked list.
-
-Feel free to explore the source code for more details on the implementation of these functions.
+Feel free to explore the repository and try out the examples to deepen your understanding of C programming.
 
 ## Contributing
 
-Contributions to this repository are welcome. If you find any issues or want to add new features, please open an issue or submit a pull request.
+Contributions to this repository are welcome. If you find any issues or have additional examples or exercises to contribute, please open an issue or submit a pull request. Your contributions can help improve the learning experience for others.
